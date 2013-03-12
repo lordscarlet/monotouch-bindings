@@ -9,8 +9,8 @@ using MonoTouch.CoreData;
 
 namespace XtifyPush
 {
-	/*[BaseType (typeof (NSObject))]
-	public interface XLXtifyOptions {
+	/* [BaseType (typeof (NSObject))]
+	public interface XLXtifyOptions { 
 
 		[Static]
 		[Export ("xtifyOptions")]
@@ -37,7 +37,7 @@ namespace XtifyPush
 		//		[Export ("xtLogMessage:content:...")]
 		//		void XtLogMessagecontent... (string header, string message,, );
 		//		
-	}*/
+	} */
 
 	// @interface XLappMgr : NSObject <UIAlertViewDelegate> 
 	[BaseType (typeof (UIAlertViewDelegate))]

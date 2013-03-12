@@ -10,7 +10,7 @@ xtify-framework.stamp: xtify-ios-sdk-2.32.zip
 	touch xtify-framework.stamp
 
 XtifyPush.dll: Makefile xtify-framework.stamp AssemblyInfo.cs XtifyLib.cs extra.cs enums.cs
-	$(BTOUCH) -unsafe -e XtifyLib.cs -s enums.cs AssemblyInfo.cs -x:extra.cs --out=$@ --link-with=xtify-ios-sdk-2.32/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework/XtifyPush,XtifyPush --outdir=tmp
+	$(BTOUCH) -unsafe -s:enums.cs -x:AssemblyInfo.cs -x:extra.cs XtifyLib.cs  --out=$@ --link-with=xtify-ios-sdk-2.32/XtifyLib/XtifyPush.embeddedframework/XtifyPush.framework/XtifyPush,XtifyPush --outdir=tmp
 
 clean:
 	-rm -rf XtifyPush.framework tmp *.a *.dll *.stamp
