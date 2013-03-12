@@ -11,7 +11,6 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Drawing;
-using OpenTK;
 
 namespace MonoTouch.Cocos2D {
 
@@ -129,14 +128,14 @@ namespace MonoTouch.Cocos2D {
 
 	[StructLayout (LayoutKind.Sequential)]
 	public struct CCV2F_C4B_T2F {
-		public Vector2 Vertices;
+		public CCVertex2F Vertices;
 		public CCColor4B Colors;
 		public CCTex2F  TexCoords;
 	}
 		
 	[StructLayout (LayoutKind.Sequential)]
 	public struct CCV3F_C4B_T2F {
-		public Vector3 Vertices;
+		public CCVertex3F Vertices;
 		public CCColor4B Colors;
 		public CCTex2F TexCoords;
 	}
@@ -151,12 +150,12 @@ namespace MonoTouch.Cocos2D {
 
 	[StructLayout (LayoutKind.Sequential)]
 	public struct CCQuad2 {
-		public Vector2 TopLeft, TopRight, BottomLeft, BottomRight;
+		public CCVertex2F TopLeft, TopRight, BottomLeft, BottomRight;
 	}
 
 	[StructLayout (LayoutKind.Sequential)]
 	public struct CCQuad3 {
-		public Vector3 BottomLeft, BottomRight, TopLeft, TopRight;
+		public CCVertex3F BottomLeft, BottomRight, TopLeft, TopRight;
 	}
 
 	public enum CCVerticalTextAlignment {
@@ -267,4 +266,17 @@ namespace MonoTouch.Cocos2D {
 		OneByOne,
 	}
 #endif
+
+	[StructLayout (LayoutKind.Sequential)]
+	public struct CCVertex2F {
+		public float x;
+		public float y;
+	}
+
+	[StructLayout (LayoutKind.Sequential)]
+	public struct CCVertex3F {
+		public float x;
+		public float y;
+		public float z;
+	}
 }
