@@ -3,7 +3,7 @@ using MonoTouch.ObjCRuntime;
 
 namespace XtifyPush {
 
-	public partial class XLXtifyOptions : NSObject {
+	public class XLXtifyOptions : NSObject {
 	    static XLXtifyOptions options;
 	    [Export ("getXtifyOptions")] //not sure that one will be ever called by obj-C code
 	    public static XLXtifyOptions XtifyOptions () {
