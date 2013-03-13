@@ -9,35 +9,7 @@ using MonoTouch.CoreData;
 
 namespace XtifyPush
 {
-//	[BaseType (typeof (NSObject))]
-//	public interface XLXtifyOptions { 
-/* 
-		[Static]
-		[Export ("xtifyOptions")]
-		XLXtifyOptions Options { get;}
 
-		[Export ("getAppKey")]
-		string GetAppKey ();
-		
-		[Export ("isLocationRequired")]
-		bool IsLocationRequired ();
-		
-		[Export ("isBackgroundLocationRequired")]
-		bool IsBackgroundLocationRequired ();
-		
-		[Export ("isLogging")]
-		bool IsLogging ();
-		
-		[Export ("isMultipleMarkets")]
-		bool IsMultipleMarkets ();
-		
-		[Export ("getManageBadgeType")]
-		XLBadgeManagedType GetManageBadgeType ();
-	 */	
-		//		[Export ("xtLogMessage:content:...")]
-		//		void XtLogMessagecontent... (string header, string message,, );
-		//		
-//	}
 
 	// @interface XLappMgr : NSObject <UIAlertViewDelegate> 
 	[BaseType (typeof (NSObject))]
@@ -91,9 +63,9 @@ namespace XtifyPush
 		[Export ("developerRegisterNotificationSelector")]
 		Selector DeveloperRegisterNotificationSelector { get; set;  }
 		
-		[Static]
-		[Export ("get")]
-		XLappMgr Manager { get; }
+		// +(XLappMgr*)get;
+		[Static, Export ("get")]
+		XLappMgr Manager ();
 		
 		[Export ("initilizeXoptions:")]
 		void InitializeXoptions (XLXtifyOptions xOptions);
